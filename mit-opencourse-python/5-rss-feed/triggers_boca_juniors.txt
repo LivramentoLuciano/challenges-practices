@@ -1,0 +1,6 @@
+t1,TITLE,Boca
+t2,DESCRIPTION,Boca
+t3,OR,t1,t2
+t4,TITLE,Corinthians
+
+ADD,t3,t4
