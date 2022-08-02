@@ -15,6 +15,20 @@
 # Only one valid answer exists.
 
 class Solution:
+    ''' Solucción adecuada (más veloz) empleando Diccionario (hash) de valores vistos '''
+    def twoSum(self, nums: list[int], target: int) -> list[int]:
+        # Indices de los números ya vistos
+        seen = {}
+        for i, num in enumerate(nums):
+            remaining = target - num
+
+            if remaining in seen:
+                return [seen[remaining], i]
+            else:
+                seen[num] = i
+
+class SolutionA:
+    ''' Solución Inicial '''
     def twoSum(self, nums: list[int], target: int) -> list[int]:
         # Tomo numeros de izq a derecha (hasta anteultimo)
         # sumandole c/u de los de la derecha
@@ -27,9 +41,9 @@ class Solution:
         # pero por las dudas... si no encontro solucion -> []
         return []
 
-
-# Resultados:
-# Runtime: 5167 ms, faster than 15.99% 
-# Memory Usage: 15 MB, less than 76.39%
-# 
-# TODO: Pruebas para mejorar la velocidad
+# pruebas
+test1 = {'nums': [2,7,11,15], 'target': 9, 'output_exp': [0,1]}
+tests = [test1]
+for test in tests:
+    res = Solution().twoSum(test['nums'], test['target'])
+    print('nums: {}, target: {} - Resultado esperado: {} - Resultado: {}'.format(test['nums'], test['target'], test['output_exp'], res))  
