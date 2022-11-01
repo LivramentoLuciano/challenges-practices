@@ -1,4 +1,4 @@
-############ LeetCode Problem N° 13: Pascal´s Triangle (Easy) #################
+############ LeetCode Problem N° 118: Pascal´s Triangle (Easy) #################
 # Given an integer numRows, return the first numRows of Pascal's triangle.
 # In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:
 #
